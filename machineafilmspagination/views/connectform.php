@@ -1,8 +1,8 @@
 <div class="container">
 	<div class="row">
-		<form id="myform" action="http://localhost:8090/machineafilmspagination/controler/connectprocess.php" method="POST">
+		<form id="myform" action="http://localhost/machineafilmspagination/controler/connectprocess.php" method="POST">
 		
-			<div class="col s12 m12 l12 xl12 ">
+			<div class="col s12 m12 l12 xl12 choix">
 				<p class="propos">Inscription à machineafilm.com<p>
 				<p id="marg">Pour aller plus loin et contribuer à l'enrichissement du site, pour faire partie de la communauté de machineafilm.com, vous pouvez vous créer un compte afin d'avoir accès à plein d'autres fonctionnalités.</p>
 			</div>
@@ -45,7 +45,7 @@
 			
 			
 		<div class="col s12 m12 l12 xl12 form-group"> 
-				<a href="http://localhost:8090/machineafilmspagination/accueil"><button class="btn waves-effect waves-light" type="submit" name="submit" value="send">Retour à l'accueil</button></a>
+				<a href="http://localhost/machineafilmspagination/accueil"><button class="btn waves-effect waves-light" type="submit" name="submit" value="send">Retour à l'accueil</button></a>
 		</div>
 		</div>
 	</div>

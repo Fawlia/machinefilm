@@ -39,14 +39,14 @@ $reqProducts = $pdo->prepare('SELECT * FROM films ORDER BY id ASC LIMIT '.$first
 			?>   
 				<div class="center-align col s4 m4 l4 xl4" id="flexa">
 					<p class="proposai"><?php echo $film['titre'] ?></p>
-					<p class="proposal"><a href="<?php echo "http://localhost:8090/machineafilmspagination/film/".$film['id']."/"; ?>">Détails</a></p>
+					<p class="proposal"><a href="<?php echo "http://localhost/machineafilmspagination/film/".$film['id']."/"; ?>">Détails</a></p>
 				</div>
 			<?php
 			}
 			?>
 
 			<div id="tousLesFilms" class="right-align">
-					<a href="http://localhost:8090/machineafilmspagination"><button class="btn waves-effect waves-light" type="submit" name="submit" value="send">Retour</button></a>	
+					<a href="http://localhost/machineafilmspagination"><button class="btn waves-effect waves-light" type="submit" name="submit" value="send">Retour</button></a>	
 			</div>	
 
 <ul class="pagination center-align">

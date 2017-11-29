@@ -11,13 +11,13 @@
 	
 	<meta property="og:title" content="Machine à Film"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="http://localhost:8090/machineafilmslier/"/>
+    <meta property="og:url" content="http://localhost/machineafilmslier/"/>
     <meta property="og:description" content="La machine à film vous permet de visualiser les infos d'un film parmi l'ensemble des films existants"/>
     <meta property="og:site_name" content="La machine à Films"/>
     
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="Machine à Film">
-    <meta name="twitter:url" content="http://localhost:8090/machineafilmslier/">
+    <meta name="twitter:url" content="http://localhost/machineafilmslier/">
     <meta name="twitter:description" content="La machine à film vous permet de visualiser les infos d'un film parmi l'ensemble des films existants">
     
 </head>
@@ -60,29 +60,29 @@ try {
 		
    
 		if ((strlen($_POST['description']) <50)){
-			header( "Refresh:3; url=http://localhost:8090/machineafilmspagination/formview", true, 303);
+			header( "Refresh:3; url=http://localhost/machineafilmspagination/formview", true, 303);
 			echo "<div class='propos'><p class='center-align'>La description n'est pas assez longue</p></div>";
 		} 
 
 		elseif ((strlen($_POST['annee']) >4) || (strlen($_POST['annee']) <4) ||((($_POST)['annee']) >2018) || ((($_POST)['annee']) <1900)) {
-			header( "Refresh:3; url=http://localhost:8090/machineafilmspagination/formview", true, 303);
+			header( "Refresh:3; url=http://localhost/machineafilmspagination/formview", true, 303);
 			echo "<div class='propos'><p class='center-align'>L'année n'est pas bonne</p></div>";
 		}
 
 		elseif ((strlen($_POST['realisateur']) >20) ||	(strlen($_POST['realisateur']) <3)){
-			header( "Refresh:3; url=http://localhost:8090/machineafilmspagination/formview", true, 303);
+			header( "Refresh:3; url=http://localhost/machineafilmspagination/formview", true, 303);
 			echo "<div class='propos'><p class='center-align'>Le nom du réalisateur n'est pas bon</p></div>";
 		}
 
 		elseif ((strlen($_POST['titre']) >20) || (strlen($_POST['titre']) < 3)){
-			header( "Refresh:3; url=http://localhost:8090/machineafilmspagination/formview", true, 303);
+			header( "Refresh:3; url=http://localhost/machineafilmspagination/formview", true, 303);
 			echo "<div class='propos'><p class='center-align'>Le titre du film n'est pas bon</p></div>";
 		}
 
 		else {
 			echo "<div class='propos'><p class='center-align'>Merci pour votre contribution!</p></div>";
 			$stmt->execute();
-			header( "Refresh:3; url=http://localhost:8090/machineafilmspagination/", true, 303);
+			header( "Refresh:3; url=http://localhost/machineafilmspagination/", true, 303);
 		}
 
     }

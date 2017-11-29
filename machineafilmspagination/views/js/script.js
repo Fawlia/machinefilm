@@ -12,7 +12,7 @@ $(document).ready(function() {
 		
 		
 		$.ajax({
-            url: "http://localhost:8090/machineafilmspagination/controler/connectprocess.php",
+            url: "http://localhost/machineafilmspagination/controler/connectprocess.php",
             type : 'POST',
             dataType: 'json',
             data : formulaire, 
@@ -56,7 +56,7 @@ $(document).ready(function() {
 				}
 				
 				else {
-					document.location.href="http://localhost:8090/machineafilmspagination/inscriptionok";
+					document.location.href="http://localhost/machineafilmspagination/inscriptionok";
 					
 					 }
 				

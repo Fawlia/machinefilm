@@ -10,7 +10,7 @@ if ($parts[1] == "machineafilmspagination") {
 	switch ($parts[2]) {
 
 		case "" :
-			header('Location: http://localhost:8090/machineafilmspagination/accueil');
+			header('Location: http://localhost/machineafilmspagination/accueil');
 			break;
 
 		case "accueil" :
@@ -56,7 +56,7 @@ if ($parts[1] == "machineafilmspagination") {
 		case "films" :
 
 			if (!isset($parts[3])){
-				header('Location: http://localhost:8090/machineafilmspagination/films/1');
+				header('Location: http://localhost/machineafilmspagination/films/1');
 			}
 
 			include_once "db_config.php";

@@ -8,7 +8,7 @@ echo "<p class='proposai'>".$film['annee']."</p>";
 echo "<p>".$film['description']."</p>";
 /*echo "<p>".$genre['genre']."</p>";*/
 echo '</div>';
-echo "<a href='http://localhost:8090/machineafilmspagination/films' class='btn btn-warning'>Retour</a>";
+echo "<a href='http://localhost/machineafilmspagination/films' class='btn btn-warning'>Retour</a>";
 echo '</div>';
 echo '</div>';
 

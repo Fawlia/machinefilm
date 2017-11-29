@@ -16,6 +16,10 @@ src: url('../fonts/Raleway-ExtraBold.ttf');
 /*##########   HEADER   ################*/
 /*######################################*/
 
+body {
+	min-height: 100vh;
+}
+
 header{
 	
 	text-align: center;
@@ -23,6 +27,11 @@ header{
 	height: 150px;
 	width: 100%;
 
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
 }
 
 
@@ -62,12 +71,9 @@ h1{
 .choix {
 	background-color: rgb(169, 194, 209);
 	margin-right:  20px;
-	height: auto;
 	margin-top: 20px;
 
-	
-	
-}
+	}
 
 .choix p {
 	padding-left: 20px;
@@ -241,7 +247,9 @@ footer{
 	background-color: #384f5d;
 	height: 50px;
 	width: 100%;
-	margin-top: 20px;
+	position: absolute;
+	bottom: 0;
+	
 
 }
 

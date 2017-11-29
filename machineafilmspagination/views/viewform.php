@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<form id="myform" action="http://localhost:8090/machineafilmspagination/views/formprocess.php" method="POST">
+		<form id="myform" action="http://localhost/machineafilmspagination/views/formprocess.php" method="POST">
 			<div class="col s12 m12 l12 xl12 ">
 				<p class="propos">Proposez votre film!<p>
 				<p id="marg">Saisissez le titre de votre film, l'année de sa sortie, le nom du ou des réalisateurs et écrivez un bref résumé du film tout en évitant de spoiler les lecteurs </p>
@@ -43,7 +43,7 @@
 			</div>
 		</form>
 		<div class="col s12 m12 l12 xl12 form-group"> 
-				<a href="http://localhost:8090/machineafilmspagination/accueil"><button class="btn waves-effect waves-light" type="submit" name="submit" value="send">Retour à l'accueil</button></a>
+				<a href="http://localhost/machineafilmspagination/accueil"><button class="btn waves-effect waves-light" type="submit" name="submit" value="send">Retour à l'accueil</button></a>
 			</div>
 	</div>
 </div>
