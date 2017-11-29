@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	
 	<title>La machine à Films</title>
-	<link type="text/css" rel="stylesheet" href="views/css/materialize.min.css"  media="screen,projection"/>
-	<link rel="stylesheet" href="views/css/style1.css">
+	<link type="text/css" rel="stylesheet" href="http://localhost:8090/machineafilmspagination/views/css/materialize.min.css"  media="screen,projection"/>
+	<link rel="stylesheet" href="http://localhost:8090/machineafilmspagination/views/css/style1.css">
 	
 	
 	<meta property="og:title" content="Machine à Film"/>
@@ -27,8 +27,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col s12 m12 l12 xl12" id="title">
-					<a href="index.php"><p id="logo"><span data-icon="&#xe04e;"></span></p></a>
-					<a href="index.php"><h1>La Machine à Films</h1></a>
+					<a href="http://localhost:8090/machineafilmspagination/accueil"><p id="logo"><span data-icon="&#xe04e;"></span></p></a>
+					<a href="http://localhost:8090/machineafilmspagination/accueil"><h1>La Machine à Films</h1></a>
 				</div>
 			</div>
 		</div>

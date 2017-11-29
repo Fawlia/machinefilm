@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<form id="myform" action="../controler/formprocess.php" method="POST">
+		<form id="myform" action="http://localhost:8090/machineafilmspagination/views/formprocess.php" method="POST">
 			<div class="col s12 m12 l12 xl12 ">
 				<p class="propos">Proposez votre film!<p>
 				<p id="marg">Saisissez le titre de votre film, l'année de sa sortie, le nom du ou des réalisateurs et écrivez un bref résumé du film tout en évitant de spoiler les lecteurs </p>

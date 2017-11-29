@@ -3,30 +3,99 @@
 $uri = $_SERVER['REQUEST_URI'];
 $parts = explode('/', rtrim($uri, '/'));
 
-var_dump($parts);
 
+if ($parts[1] == "machineafilmspagination") {
+	
 
+	switch ($parts[2]) {
 
-switch ($parts[2]) {
+		case "" :
+			header('Location: http://localhost:8090/machineafilmspagination/accueil');
+			break;
+
+		case "accueil" :
+
+			include_once "db_config.php";
+			include_once "./models/movies.php";
+
+			include_once "views/header.php";
+			include_once "views/accueil.php";
+			include_once "views/footer.php";
+			break;
+
+		case "formview" :
+
+			include_once "db_config.php";
+			include_once "./models/movies.php";
+
+			include_once "views/header.php";
+			include_once "views/viewform.php";
+			include_once "views/footer.php";
+			break;
+			
+		case "inscription" :
+
+			include_once "db_config.php";
+			include_once "./models/movies.php";
+
+			include_once "views/header.php";
+			include_once "views/connectform.php";
+			include_once "views/footer.php";
+			break;
+
+		case "films" :
+
+			if (!isset($parts[3])){
+				header('Location: http://localhost:8090/machineafilmspagination/films/1');
+			}
+
+			include_once "db_config.php";
+			include_once "./models/movies.php";
+
+			include_once "views/header.php";
+			include_once "views/films.php";
+			include_once "views/footer.php";
+			break;
+
+		case "film" :
+
+			if(isset($parts[3])){
+
+				if(is_numeric($parts[3])){
+
+					$id = $parts[3];
+
+					include_once "db_config.php";
+					include_once "models/movies.php";
+
+					$film = getMovieById($pdo, $id);
+					
+					include_once "views/header.php";
+					include_once "views/film.php";
+
+					include_once "views/footer.php";
+
+				}
+				
 		
-	case "" :
-		header('Location: http://localhost:8090/machineafilmspagination/accueil');
-		break;
-		
-	case "accueil" :
-		include_once "views/header.php";
-		echo "accueil";
-		include_once "views/accueil.php";
-		include_once "views/footer.php";
-		break;
-		
-	case "formview" :
-		include_once "views/header.php";
-		include_once "views/viewform.php";
-		include_once "views/footer.php";
-		break;
+		  }else{
+			
+			include_once "views/header.php";
+			include_once "views/404.php";
+			include_once "views/footer.php";
+		  }
+
+	  break;
+			
+			
+	}
 }
 
+else{
+	include_once "views/header.php";
+	include_once "views/404.php";
+	include_once "views/footer.php";
+}
 
 
 
