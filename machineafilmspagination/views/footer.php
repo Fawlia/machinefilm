@@ -12,6 +12,7 @@
 	
 	<script type="text/javascript" src="views/js/materialize.js"></script>
 	<script type="text/javascript" src="views/js/jquery.min.js"></script>
+	<script type="text/javascript" src="views/js/script.js"></script>
 	
 
 </body>

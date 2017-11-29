@@ -33,6 +33,16 @@ if ($parts[1] == "machineafilmspagination") {
 			include_once "views/footer.php";
 			break;
 			
+			case "inscriptionok" :
+
+			include_once "db_config.php";
+			include_once "./models/movies.php";
+
+			include_once "views/header.php";
+			include_once "views/connectsuccess.php";
+			include_once "views/footer.php";
+			break;
+			
 		case "inscription" :
 
 			include_once "db_config.php";
