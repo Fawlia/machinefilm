@@ -1,8 +1,44 @@
 <?php
 
+function deco(){
+	session_start();
+	$_SESSION = array();
+	session_destroy();
+	header("Location:accueil");
+}
 
+function connexion(){
+	
+	var_dump($_POST['formconnexion']);
 
-// connexion au serveur
+	if(isset($_POST['formconnexion'])){
+		$mailconnect = ($_POST['mailconnect']);
+		$mdpconnect = ($_POST['mdpconnect']);
+
+		// IL FAUT CONTINUER LES CONDITIONS AVEC SI IL MANQUE 1 CHAMPS
+		if(!empty($mailconnect) AND !empty($mdpconnect)){
+			$requser = $pdo->prepare("SELECT * FROM users WHERE mail = ? AND mdp = ?");
+			$requser->execute(array($mailconnect, $mdpconnect));
+
+			// VERIFIE SI USER EXISTE DANS LA BDD
+			// pas de vérif à ce niveau puisque si user n'existe pas pas ce souci à vérifier dans l'inscription
+			$userexist = $requser->rowCount();
+			
+			if($userexist == 1) {
+				$userinfo = $requser->fetch(); // nous recevons les informations avec fetch donc on les mets dans des variables de sessions
+				$_SESSION['id'] = $userinfo['id']; 
+				$_SESSION['nom'] = $userinfo['nom'];
+				$_SESSION['mail'] = $userinfo['mail'];
+				header("Location: http://localhost/machineafilmspagination/accueil/?id=".$_SESSION['id']);// Pour rediriger vers le profil de la personne
+
+			} else {
+			$erreur = "Mauvais mail ou mot de passe !";
+			}
+		} else {
+		$erreur = "Tous les champs doivent être complétés !";
+		}
+	}
+}
 
 
 function getFilms() {   

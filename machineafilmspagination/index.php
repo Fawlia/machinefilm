@@ -22,6 +22,26 @@ if ($parts[1] == "machineafilmspagination") {
 			include_once "views/accueil.php";
 			include_once "views/footer.php";
 			break;
+			
+			case "connexion" :
+
+			include_once "db_config.php";
+			include_once "./models/movies.php";
+
+			include_once "views/header.php";
+			include_once "views/connexion.php";
+			include_once "views/footer.php";
+			break;
+			
+			case "deconnexion" :
+
+			include_once "db_config.php";
+			include_once "./models/movies.php";
+
+			include_once "views/header.php";
+			include_once "views/deconnexion.php";
+			include_once "views/footer.php";
+			break;
 
 		case "formview" :
 
@@ -84,22 +104,34 @@ if ($parts[1] == "machineafilmspagination") {
 					include_once "views/film.php";
 
 					include_once "views/footer.php";
+					break;
 
 				}
 				
 		
-		  }else{
-			
-			include_once "views/header.php";
-			include_once "views/404.php";
-			include_once "views/footer.php";
-		  }
+				else{
 
-	  break;
+					include_once "views/header.php";
+					include_once "views/404.php";
+					include_once "views/footer.php";
+					break;
+				  }
+				 }
 			
 			
+		case "filmok" :
+			
+			include_once "db_config.php";
+			include_once "./models/movies.php";
+
+			include_once "views/header.php";
+			include_once "views/filmsuccess.php";
+			include_once "views/footer.php";
+			break;
+			
+			}
 	}
-}
+
 
 else{
 	include_once "views/header.php";

@@ -67,7 +67,70 @@ $(document).ready(function() {
             
         });
 		
-	}); 
+	});
+	
+	$("#filmform").submit(function(event) {
+		event.preventDefault();
+		
+		var form = {
+		"titre": $("#titre").val(),
+		"annee" : $("#annee").val(),
+		"realisateur" : $("#realisateur").val(),
+		"description" : $("#description").val()
+		}
+		
+		
+		$.ajax({
+            url: "http://localhost/machineafilmspagination/controler/filmprocess.php",
+            type : 'POST',
+            dataType: 'json',
+            data : form, 
+			
+            success: function(success){
+				
+				console.log(success.length);
+                if (success.length !== 0){				
+				
+					if((success.titre == "empty") || (success.titre == "short")){
+						$('#titre').css('border', "2px red solid");
+					}else{
+						$('#titre').css('border', "2px green solid");
+					}
+
+
+					if((success.annee == "empty") || (success.annee == "short")){
+						$('#annee').css('border', "2px red solid");
+					}else{
+						$('#annee').css('border', "2px green solid");
+					}
+
+					if((success.realisateur == "empty") || (success.realisateur == "false")){
+						$('#realisateur').css('border', "2px red solid");
+					}else{
+						$('#realisateur').css('border', "2px green solid");
+					}
+
+					if((success.description == "empty") || (success.description == "short")){
+						$('#description').css('border', "2px red solid");
+					}else{
+						$('#description').css('border', "2px green solid");
+					}
+
+					
+				}
+				
+				else {
+					document.location.href="http://localhost/machineafilmspagination/filmok";
+					
+					 }
+				
+            },
+            error: function(){
+                console.log('REQUETE AJAX DEAD       ');
+            },
+            
+        });
+		
+	});
+	
 });
-
-
