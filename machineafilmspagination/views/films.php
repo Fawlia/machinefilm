@@ -37,7 +37,11 @@ $reqProducts = $pdo->prepare('SELECT * FROM films ORDER BY id ASC LIMIT '.$first
 			
 			foreach ($result as  $film){
 			?>   
-				<div class="center-align col s4 m4 l4 xl4" id="flexa">
+				<div class="center-align col s6 m6 l4 xl4 alacon">
+					<div class="">
+
+					<img src="http://localhost/machineafilmspagination/views/img/<?php echo $film['id'] ?>.jpg" alt="">
+				</div>
 					<p class="proposai"><?php echo $film['titre'] ?></p>
 					<p class="proposal"><a href="<?php echo "http://localhost/machineafilmspagination/film/".$film['id']."/"; ?>">Détails</a></p>
 				</div>

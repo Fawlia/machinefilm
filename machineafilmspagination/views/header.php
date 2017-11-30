@@ -7,6 +7,7 @@
 	<title>La machine à Films</title>
 	<link type="text/css" rel="stylesheet" href="http://localhost/machineafilmspagination/views/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" href="http://localhost/machineafilmspagination/views/css/style1.css">
+	<link rel="stylesheet" href="http://localhost/machineafilmspagination/views/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	
 	
 	<meta property="og:title" content="Machine à Film"/>
@@ -32,6 +33,43 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="container-fluid">
+			<nav id="navigation">
+				<div class="container">
+					<div class="row">
+						<div class="col s12 m12 l12 xl12">
+							<div class="nav-wrapper">
+
+								<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars" aria-hidden="true"></i></a>
+
+								<ul id="nav-mobile" class="left hide-on-med-and-down">
+
+									<li><a href="http://localhost/machineafilmspagination/accueil"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></li>
+									<li><a href="http://localhost/machineafilmspagination/formview"><i class="fa fa-plus" aria-hidden="true"></i> Ajouter</a></li>
+									<li><a href="http://localhost/machineafilmspagination/films">  <i class="fa fa-video-camera" aria-hidden="true"></i> Films</a></li>
+									<li><a href="http://localhost/machineafilmspagination/inscription"><i class="fa fa-pencil" aria-hidden="true"></i> Inscription <!-- <span class="new badge">4</span> --></a></li>
+									<li><a href="">About</a></li>
+									<li><a href=""><i class="fa fa-key" aria-hidden="true"></i> Connexion</a></li>
+
+								</ul>
+
+
+								<ul class="side-nav" id="mobile-demo">
+
+									<li><a href="http://localhost/machineafilmspagination/accueil"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></li>
+									<li><a href="http://localhost/machineafilmspagination/formview"><i class="fa fa-plus" aria-hidden="true"></i> Ajouter</a></li>
+									<li><a href="http://localhost/machineafilmspagination/films">  <i class="fa fa-video-camera" aria-hidden="true"></i> Films</a></li>
+									<li><a href="http://localhost/machineafilmspagination/inscription"><i class="fa fa-pencil" aria-hidden="true"></i> Inscription <!-- <span class="new badge">4</span> --></a></li>
+									<li><a href="">About</a></li>
+									<li><a href=""><i class="fa fa-key" aria-hidden="true"></i> Connexion</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
 	</header>
 	
-	<main >
+	<main>

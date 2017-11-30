@@ -128,7 +128,31 @@ if ($parts[1] == "machineafilmspagination") {
 				include_once "views/header.php";
 				include_once "views/filmsuccess.php";
 				include_once "views/footer.php";
-				break;
+			break;
+				
+			case "addmovie" :
+
+			include_once "db_config.php";
+			include_once "./models/movies.php";
+			include_once "./controler/filmprocess.php";
+				
+				
+			$error = verifMovie();
+				
+				
+			
+				
+	
+			if(empty($error)){
+				
+				insertFilm($pdo);
+				
+			}
+				
+			echo json_encode($error);
+				
+
+			break;
 				
 			default :
 					include_once "views/header.php";

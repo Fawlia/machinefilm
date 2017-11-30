@@ -1,5 +1,26 @@
 <?php
 
+function insertFilm($pdo){
+	
+
+		$stmt = $pdo->prepare("INSERT INTO films (titre, annee, realisateur, description) 
+		VALUES (:titre, :annee, :realisateur, :description)");
+
+		$stmt->bindParam(':titre', $_POST["titre"]);
+		$stmt->bindParam(':annee', $_POST["annee"]);
+		$stmt->bindParam(':realisateur', $_POST["realisateur"]);
+		$stmt->bindParam(':description', $_POST["description"]);
+		$result = $stmt->execute();
+	
+		return $result;
+
+
+
+
+
+
+}
+
 function deco(){
 	session_start();
 	$_SESSION = array();

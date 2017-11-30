@@ -81,7 +81,7 @@ $(document).ready(function() {
 		
 		
 		$.ajax({
-            url: "http://localhost/machineafilmspagination/controler/filmprocess.php",
+            url: "http://localhost/machineafilmspagination/addmovie",
             type : 'POST',
             dataType: 'json',
             data : form, 
@@ -119,10 +119,10 @@ $(document).ready(function() {
 					
 				}
 				
-				else {
+				/*else {
 					document.location.href="http://localhost/machineafilmspagination/filmok";
 					
-					 }
+					 }*/
 				
             },
             error: function(){
