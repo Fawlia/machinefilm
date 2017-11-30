@@ -70,18 +70,34 @@ function getMovieById($pdo, $id){
 
 function getGenre($pdo, $id){
 
-  $stmt = $pdo->prepare("SELECT genres.genre, films.id FROM l_film_genre 
+ $stmt = $pdo->prepare("
+SELECT genres.genre, films.id FROM l_film_genre 
 INNER JOIN genres ON genres.id = l_film_genre.id_genres 
-INNER JOIN films ON films.id = l_film_genre.id_film");
+INNER JOIN films ON films.id = l_film_genre.id_film
+");
   $stmt->execute();
 	
   $resultGenre = $stmt->fetchAll();
 	
-  foreach($resultGenre as $occurence => $id){
+	
 	  return $resultGenre;
   }
+
+function getUserPost($pdo, $id){
+
+ $stmt = $pdo->prepare("
+SELECT users.prenom, films.id FROM l_film_user 
+INNER JOIN users ON users.id = l_film_user.id_user
+INNER JOIN films ON films.id = l_film_user.id_film
+");
+  $stmt->execute();
 	
-}
+  $resultUser = $stmt->fetchAll();
+	
+	
+	
+	  return $resultUser;
+  }
 
 
 

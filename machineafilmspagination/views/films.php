@@ -2,7 +2,7 @@
 	<div class="row">    
 			<?php
 		
-		$perPage = 6;
+$perPage = 6;
 
 $req = $pdo->query('SELECT COUNT(*) AS total FROM films');
 $result = $req->fetch();
