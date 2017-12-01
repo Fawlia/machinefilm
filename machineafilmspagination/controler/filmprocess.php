@@ -15,7 +15,7 @@ function verifMovie(){
 			
 		}
 
-				if (strlen($_POST["titre"]) < 2 )
+			if (strlen($_POST["titre"]) < 2 )
 					{$error['titre'] = "short";}
 			}
 

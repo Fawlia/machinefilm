@@ -48,9 +48,17 @@
 									<li><a href="http://localhost/machineafilmspagination/accueil"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></li>
 									<li><a href="http://localhost/machineafilmspagination/formview"><i class="fa fa-plus" aria-hidden="true"></i> Ajouter</a></li>
 									<li><a href="http://localhost/machineafilmspagination/films">  <i class="fa fa-video-camera" aria-hidden="true"></i> Films</a></li>
-									<li><a href="http://localhost/machineafilmspagination/inscription"><i class="fa fa-pencil" aria-hidden="true"></i> Inscription <!-- <span class="new badge">4</span> --></a></li>
+									
 									<li><a href="">About</a></li>
-									<li><a href=""><i class="fa fa-key" aria-hidden="true"></i> Connexion</a></li>
+									
+									
+									<?php if ((isset($info_user)) && ($info_user = $res)){ ?>
+									<li><a href="http://localhost/machineafilmspagination/deconnexion"><i class="fa fa-key" aria-hidden="true"></i> deconnexion</a></li>
+									<?php }else{ ?>
+									<li><a href="http://localhost/machineafilmspagination/inscription"><i class="fa fa-pencil" aria-hidden="true"></i> Inscription <!-- <span class="new badge">4</span> --></a></li>
+									<li><a href="http://localhost/machineafilmspagination/connexion"><i class="fa fa-key" aria-hidden="true"></i> Connexion</a></li>
+									<?php }?>
+																		
 
 								</ul>
 

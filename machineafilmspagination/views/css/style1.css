@@ -26,7 +26,7 @@ header{
 	background-color: #384f5d;
 	height: 150px;
 	width: 100%;
-	position: fixed;
+	
 
 }
 
@@ -76,11 +76,11 @@ z-index: 1000;
 
  }
 
-/*.sticky {
+.sticky {
   position: fixed;
   top: 0;
   width: 100%
-}*/
+}
 
 #nav-mobile li  {
 

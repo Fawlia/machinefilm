@@ -1,5 +1,13 @@
 <?php
 
+function deco(){
+
+	session_start();
+	session_unset();
+	session_destroy();
+	header('Location: http://localhost/machineafilmspagination/accueil');
+}
+
 function insertFilm($pdo){
 	
 
@@ -13,20 +21,8 @@ function insertFilm($pdo){
 		$result = $stmt->execute();
 	
 		return $result;
-
-
-
-
-
-
 }
 
-function deco(){
-	session_start();
-	$_SESSION = array();
-	session_destroy();
-	header("Location:accueil");
-}
 
 function connexion(){
 	

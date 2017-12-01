@@ -2,7 +2,7 @@
 
 $uri = $_SERVER['REQUEST_URI'];
 $parts = explode('/', rtrim($uri, '/'));
-
+session_start();
 
 if ($parts[1] == "machineafilmspagination") {
 	
@@ -16,6 +16,16 @@ if ($parts[1] == "machineafilmspagination") {
 
 				include_once "db_config.php";
 				include_once "./models/movies.php";
+				include_once "./controler/connect_user.php";
+				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
 
 				include_once "views/header.php";
 				include_once "views/accueil.php";
@@ -26,26 +36,99 @@ if ($parts[1] == "machineafilmspagination") {
 
 				include_once "db_config.php";
 				include_once "./models/movies.php";
+				include_once "./controler/connect_user.php";
+				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
 
 				include_once "views/header.php";
 				include_once "views/connexion.php";
 				include_once "views/footer.php";
 				break;
-
-				case "deconnexion" :
+				
+				
+				case "connexionOK" :
 
 				include_once "db_config.php";
 				include_once "./models/movies.php";
+				include_once "./controler/connect_user.php";
+				
+				$info = connect($pdo, $_POST['mailconnect'], $_POST['mdpconnect']);
+				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
+				
+				
+				
+				
+				include_once "views/header.php";
+				include_once "views/connexionOK.php";
+				include_once "views/footer.php";
+				break;
 
+				case "deconnexion" :
+				include_once "./controler/connect_user.php";
+				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
+				if(isset($parts[3])){
+					if($parts[3] == 1){
+						if(isset($_SESSION['info_user'])){
+						unset($_SESSION['info_user']);
+							header('Location: http://localhost/machineafilmspagination/accueil');
+						}else{
+							header('Location: http://localhost/machineafilmspagination/accueil');
+						}
+						header('Location: http://localhost/machineafilmspagination/accueil');
+					}else{
+						
+						header('Location: http://localhost/machineafilmspagination/accueil');
+					}
+					
+				}else{
+					
 				include_once "views/header.php";
 				include_once "views/deconnexion.php";
 				include_once "views/footer.php";
+					
+					
+				}
+				
+				
 				break;
 
 			case "formview" :
 
 				include_once "db_config.php";
 				include_once "./models/movies.php";
+				include_once "./controler/connect_user.php";
+				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
 
 				include_once "views/header.php";
 				include_once "views/viewform.php";
@@ -53,9 +136,20 @@ if ($parts[1] == "machineafilmspagination") {
 				break;
 
 				case "inscriptionok" :
+				
 
 				include_once "db_config.php";
 				include_once "./models/movies.php";
+				include_once "./controler/connect_user.php";
+				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
 
 				include_once "views/header.php";
 				include_once "views/connectsuccess.php";
@@ -66,6 +160,16 @@ if ($parts[1] == "machineafilmspagination") {
 
 				include_once "db_config.php";
 				include_once "./models/movies.php";
+				include_once "./controler/connect_user.php";
+				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
 
 				include_once "views/header.php";
 				include_once "views/connectform.php";
@@ -80,6 +184,16 @@ if ($parts[1] == "machineafilmspagination") {
 
 				include_once "db_config.php";
 				include_once "./models/movies.php";
+				include_once "./controler/connect_user.php";
+				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
 
 				include_once "views/header.php";
 				include_once "views/films.php";
@@ -96,6 +210,16 @@ if ($parts[1] == "machineafilmspagination") {
 
 						include_once "db_config.php";
 						include_once "models/movies.php";
+						include_once "./controler/connect_user.php";
+				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
 
 						$film = getMovieById($pdo, $id);
 						$genre = getGenre($pdo, $id);
@@ -124,6 +248,16 @@ if ($parts[1] == "machineafilmspagination") {
 
 				include_once "db_config.php";
 				include_once "./models/movies.php";
+				include_once "./controler/connect_user.php";
+				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
 
 				include_once "views/header.php";
 				include_once "views/filmsuccess.php";
@@ -132,27 +266,28 @@ if ($parts[1] == "machineafilmspagination") {
 				
 			case "addmovie" :
 
-			include_once "db_config.php";
-			include_once "./models/movies.php";
-			include_once "./controler/filmprocess.php";
+				include_once "db_config.php";
+				include_once "./models/movies.php";
+				include_once "./controler/filmprocess.php";
+				include_once "./controler/connect_user.php";
 				
-				
-			$error = verifMovie();
-				
-				
-			
-				
-	
-			if(empty($error)){
-				
-				insertFilm($pdo);
-				
-			}
-				
-			echo json_encode($error);
-				
+				$res = checkSession();
+					
+				if($res != false){
+					$info_user = $res;
+					var_dump($info_user);
+				}else{
+					$info_user = false;
+				}
 
-			break;
+				$error = verifMovie();
+
+				if(empty($error)){				
+					insertFilm($pdo);
+				}
+
+				echo json_encode($error);
+				break;
 				
 			default :
 					include_once "views/header.php";

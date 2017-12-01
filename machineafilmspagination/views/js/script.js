@@ -119,10 +119,10 @@ $(document).ready(function() {
 					
 				}
 				
-				/*else {
+				else {
 					document.location.href="http://localhost/machineafilmspagination/filmok";
 					
-					 }*/
+					 }
 				
             },
             error: function(){
